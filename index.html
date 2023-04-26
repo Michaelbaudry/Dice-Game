@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu de Dé</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-6 text-center">
+        <h1 class="text-uppercase font-weight-bold mb-3">Dice Game</h1>
+        <button id="new-game" class="btn btn-primary mb-3"><span class="icon icon-add"></span>New Game</button>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-4 text-center">
+        <div class="player-box">
+          <h2 class="text-uppercase font-weight-bold mb-3">Player 1</h2>
+          <p class="player playerName-0 mb-1"><span class="player-0 active-player"></span></p>
+          <p class="score mb-1"><span id="score-0">0</span></p>
+          <p class="current-score mb-1">CURRENT : <span id="current-0">0</span></p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 text-center">
+        <div id="dice" class="dice-box"></div>
+        <div class="action-box">
+          <button id="reload" class="btn btn-primary mb-2"><span class="icon icon-reload"></span>Roll Dice</button>
+          <button id="download" class="btn btn-secondary"><span class="icon icon-download"></span>Hold</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 text-center">
+        <div class="player-box">
+          <h2 class="text-uppercase font-weight-bold mb-3">Player 2</h2>
+          <p class="player playerName-1 mb-1"><span class="player-1 active-player"></span></p>
+          <p class="score mb-1"><span id="score-1">0</span></p>
+          <p class="current-score mb-1">CURRENT : <span id="current-1">0</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
