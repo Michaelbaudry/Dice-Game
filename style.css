@@ -1,9 +1,4 @@
 /*
-*****************
-* variables
-*****************
-*/
-/*
 ***********
 * Body
 ***********
@@ -42,6 +37,7 @@ body {
     font-weight: 400;
     color: gray;
     cursor: pointer;
+    background-color: #eee;
   }
   
   .btn:hover {
@@ -95,12 +91,8 @@ body {
     font-size: large;
     letter-spacing: 1px;
     margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
-  
+
   @media (min-width: 576px) {
     .player {
       font-size: x-large;
@@ -108,19 +100,17 @@ body {
     }
   }
 
-  .active-player {
-    content: url(./images/icons/circle-fill.svg);
-    width: 13px;
-    margin-left: 10px;
-    padding-bottom: 2px;
-  }
-  
-  .active-player .circle-fill {
+  .active-player::before {
+    content: '';
     position: absolute;
-    right: -10px;
-    top: 50%;
+    top: 5%;
+    right: 0;
     transform: translateY(-50%);
-  }
+    width: 13px;
+    height: 13px;
+    background: url(./images/icons/circle-fill.svg);
+    background-size: contain;
+}
 
   .winner-player {
     font-weight: 700;
@@ -136,6 +126,7 @@ body {
     font-weight: 200;
     font-size: 50px;
     margin: 0;
+    color: red;
   }
   
   .current-score {
@@ -144,13 +135,17 @@ body {
     margin: auto;
     padding: 10px 0 10px 0;
   }
+
+  #current-0, #current-1 {
+    color: white;
+  }
   
   @media (min-width: 576px) {
     .current-score {
       margin-top: 120px;
     }
   }
-  .current-text {
+  /*.current-text {
     font-weight: 300;
     font-size: 10px;
     margin-top: 0;
@@ -159,4 +154,4 @@ body {
   .current-number {
     font-size: 20px;
     margin: 0;
-  }
+  }*/
